@@ -154,6 +154,8 @@ Guide to adding the following snippets to Videosync:
 
 ## Countdown to hidden state
 
+HTML:
+
 ```html
 <div class="welcome-text-hidden">
   <h3>Tervetuloa!</h3>
@@ -175,6 +177,8 @@ Guide to adding the following snippets to Videosync:
   </div>
 </div>
 ```
+
+CSS:
 
 ```css
 /* COUNTDOWN */
@@ -230,6 +234,8 @@ Guide to adding the following snippets to Videosync:
   font-size: 40px;
 }
 ```
+
+JavaScript:
 
 ```javascript
 <script>
@@ -317,6 +323,8 @@ if (!url.includes("register")) {
 
 ## Using a Google font
 
+CSS:
+
 ```css
 /* Inter as an example */
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
@@ -359,13 +367,16 @@ Looks like this:
   flex-direction: column;
 }
 
-/* Add the rule "order: " to all necessary elements followed by the respective number in which order you want them to be */
+/* Add the rule "order: " to all necessary elements followed by the
+respective number in which order you want them to be */
 #vs-header {
   order: 0;
 }
+
 #vs-about-section {
   order: 2;
 }
+
 #vs-presentation {
   order: 1;
 }
@@ -373,7 +384,7 @@ Looks like this:
 
 ## Full width background image for the hidden text
 
-<ul><li>Good size for a background image is 1980x1080</li></ul>
+_Good size for a background image is 1980x1080_
 
 ```css
 /* Hidden as an example */
