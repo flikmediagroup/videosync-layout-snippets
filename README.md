@@ -180,6 +180,7 @@ body {
 ```
 
 ## Topic list to About section
+HTML:
 ```html
 <ul>
   <li>Topic 1</li>
@@ -189,6 +190,15 @@ body {
   <li>Topic 5</li>
 </ul>
 ```
+Looks like this:
+<ul>
+  <li>Topic 1</li>
+  <li>Topic 2</li>
+  <li>Topic 3</li>
+  <li>Topic 4</li>
+  <li>Topic 5</li>
+</ul>
+
 
 ## Changing the order of page elements
 
