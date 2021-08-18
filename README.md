@@ -111,7 +111,7 @@ function addCountDown(e) {
     var date = new Date(_eventData.publishingDate);
     var countDownDay = date.getTime();
     var dateSpan = document.querySelector("#date-span");
-    dateSpan.innerHTML = date.getDate() + "." + date.getMonth() + 1 + "." + date.getFullYear();
+    dateSpan.innerHTML = date.getDate() + "." + (date.getMonth() + 1) + "." + date.getFullYear();
     // today
     var now = new Date().getTime();
     if (countDownDay === now || countDownDay < now) {
