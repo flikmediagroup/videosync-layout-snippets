@@ -183,6 +183,34 @@ body {
 
 ## Changing the order of page elements
 
+```css
+
+/*Order rule to all element and add number to it in order you want it. */
+.vs-mainwrapper{
+  display:flex; 
+  flex-direction:column;
+}
+#vs-header{
+  order:0;
+}
+#vs-about-below-video {}
+#vs-about-section { order:2;}
+#vs-registration {}
+#vs-presentation {order:1;}
+#vs-thumbnails {}
+#vs-attachments {}
+#vs-hidden {}
+#vs-messageboard {}
+#vs-links {}
+#vs-chapters {}
+#vs-chapter-select {}
+#vs-questionnaire {}
+#vs-footer {}
+#vs-videosync-footer {}
+
+
+```
+
 ## Full width hidden text background image
 <ul><li>Good size background image is 1980x1080</li></ul>
 
