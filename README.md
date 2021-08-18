@@ -1,6 +1,6 @@
 # General information
 
-Includes FAQ and the most common HTML/CSS/JS snippets to use in Videosync layouts
+Includes **FAQ** and the most common **HTML/CSS/JS snippets** to use in Videosync layouts
 
 ##
 
@@ -42,6 +42,8 @@ If it is an old event:
 
 2. To hide, go **Page Layout > Advanced layout** and add the following code `#chatboard-comments { display: none; }`.
 
+##
+
 #### Any element
 
 The `display: none;` rule can be applied to all elements on the page. You just have to find out the name of the required element using the browser's inspector or guess from the list below.
@@ -76,8 +78,9 @@ The `display: none;` rule can be applied to all elements on the page. You just h
 #vs-thumbnails {
   /* Slide thumbnails carousel below video & slide */
 }
+Includes FAQ and the most common HTML/CSS/JS snippets to use in Videosync layouts
 
-#vs-attachments {
+
   /* Attachments list */
 }
 
