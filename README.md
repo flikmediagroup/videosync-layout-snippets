@@ -91,7 +91,7 @@ This applies to all the following snippets:
 ```javascript
 <script>
 /* COUNTDOWN */
-
+var url = window.location.pathname;
 function addCountDown(e) {
   var videoEl = document.getElementById("bitmovin-player");
   var regEl = document.querySelector("#vs-registration");
@@ -125,7 +125,6 @@ function addCountDown(e) {
         // setting distance time to days, hours, minutes, seconds
         var days = Math.floor(distance / (1000 * 3600 * 24));
 
-        console.log(days);
 
         var hours = Math.floor((distance % (1000 * 3600 * 24)) / (1000 * 3600));
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
