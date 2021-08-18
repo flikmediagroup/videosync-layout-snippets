@@ -2,9 +2,13 @@
 
 Includes FAQ and the most common HTML/CSS/JS snippets to use in Videosync layouts
 
+##
+
 # FAQ
 
 First, responses to some frequently asked questions about Videosync layouts:
+
+##
 
 ### What is CSS class or id?
 
@@ -18,9 +22,13 @@ In CSS: `#container { color: red; }`
 
 So in CSS, class uses dot (.) and id uses hashtag (#).
 
+##
+
 ### What is a good resolution for background images?
 
 1920x1080 is usually fine. If the image size is several Mb's, you should resize it using Videosync image cropper or external tools.
+
+##
 
 ### How do I hide/show chat messages (or any other element)?
 
@@ -74,7 +82,8 @@ The `display: none;` rule can be applied to all elements on the page. You just h
 }
 
 #vs-hidden {
-  /* Hidden state placeholder for the player/slide area. Usually contains text "Live is paused" etc. Applies to pre-live, paused and hidden-od states. */
+  /* Hidden state placeholder for the player/slide area. Usually contains text "Live is paused" etc.
+  Applies to pre-live, paused and hidden-od states. */
 }
 
 #vs-messageboard {
@@ -108,6 +117,8 @@ The `display: none;` rule can be applied to all elements on the page. You just h
 /* Notify the dev team if something should be added to this list */
 ```
 
+##
+
 ### I can't find an element, for example "Speakers list" anywhere on the admin page. Where is it and how can I edit it?
 
 It is most likely custom made HTML structure in the about section. Check it out and look for HTML tags containing the information you're looking for:
@@ -123,6 +134,8 @@ The styles related to this element can also be found by searching the _.custom_ 
   color: red;
 }
 ```
+
+##
 
 # Snippets
 
