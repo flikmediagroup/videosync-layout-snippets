@@ -182,7 +182,6 @@ body {
 ## Topic list to About section
 HTML:
 ```html
-<h2>Agenda</h2>
 <ul>
   <li>Topic 1</li>
   <li>Topic 2</li>
@@ -192,7 +191,6 @@ HTML:
 </ul>
 ```
 Looks like this:
-<h2>Agenda</h2>
 <ul>
   <li>Topic 1</li>
   <li>Topic 2</li>
