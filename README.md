@@ -14,7 +14,7 @@ First, responses to some frequently asked questions about Videosync layouts:
 
 A class is used in HTML like this: `<div class="container">content</div>`.
 
-In CSS, this class can be referred like this to change its font color, for xample: `.container { color: red; }`
+In CSS, this class can be referred like this to change its font color, for example: `.container { color: red; }`
 
 ID is basically the same, but with different syntax: `<div id="container-id">content</div>`.
 
@@ -32,19 +32,24 @@ So in CSS, class uses dot (.) and id uses hashtag (#).
 
 ### How do I hide/show chat messages (or any other element)?
 
-#### Chat:
+### Chat:
 
 There is now a toggle within messageboard settings **"Hide published messages on viewing page"**.
 
 If it is an old event:
 
-1. To show, go to **Page Layout > Advanced layout** and (Ctrl+f) search for `#chatboard-comments { display: none; }`, remove this line.
+**To show**
 
-2. To hide, go **Page Layout > Advanced layout** and add the following code `#chatboard-comments { display: none; }`.
+1. Go to **Page Layout > Advanced layout**
+2. (Ctrl+f) search for `#chatboard-comments { display: none; }`
+3. Remove `display: none;`
 
-##
+**To hide**
 
-#### Any element
+1. Go to **Page Layout > Advanced layout**
+2. Add the following code `#chatboard-comments { display: none; }`
+
+### Any element
 
 The `display: none;` rule can be applied to all elements on the page. You just have to find out the name of the required element using the browser's inspector or guess from the list below.
 
