@@ -3,10 +3,10 @@
 Includes the most common HTML/CSS/JS snippets to use in Videosync layouts
 
 This applies to all the following snippets:
-1. HTML should be added to their respective text fields (e.g. *Page Layout > About section > Content* OR *Page Layout > Hidden stage setting > Text for pre-live presentation*)
-2. CSS should be added to *Advanced layout* (usually to the upper field *Register and event page CSS*)
-3. JavaScript should be added to *Slides & Settings > Embed own javascript*. Always include <script> `CODE` </script> tags around the JS code.
 
+1. HTML should be added to their respective text fields (e.g. _Page Layout > About section > Content_ OR _Page Layout > Hidden stage setting > Text for pre-live presentation_)
+2. CSS should be added to _Advanced layout_ (usually to the upper field _Register and event page CSS_)
+3. JavaScript should be added to _Slides & Settings > Embed own javascript_. Always include <script> `CODE` </script> tags around the JS code.
 
 # Snippets
 
@@ -16,7 +16,8 @@ This applies to all the following snippets:
 <div class="welcome-text-hidden">
   <h3>Tervetuloa!</h3>
   <div>
-    Lähetys alkaa automaattisesti tällä sivulla xx.xx.2021. Tapahtuman alkuun:
+    Lähetys alkaa automaattisesti tällä sivulla <span id="date-span"></span>.
+    Tapahtuman alkuun:
   </div>
 </div>
 <div class="hidden-text-container">
@@ -92,6 +93,8 @@ This applies to all the following snippets:
 <script>
 /* COUNTDOWN */
 
+var url = window.location.pathname;
+
 function addCountDown(e) {
   var videoEl = document.getElementById("bitmovin-player");
   var regEl = document.querySelector("#vs-registration");
@@ -106,7 +109,9 @@ function addCountDown(e) {
     window.requestAnimationFrame(addCountDown);
   } else if (!videoEl) {
     var countDownDay = new Date(_eventData.publishingDate).getTime();
-    //today
+    var dateSpan = document.querySelector("#date-span");
+    dateSpan.innerHTML = countDownDay.getDate() + "." + countDownDay.getMonth() + 1 + "." + countDownDay.getFullYear();
+    // today
     var now = new Date().getTime();
     if (countDownDay === now || countDownDay < now) {
       var hiddenTextContainer = document.querySelector(
@@ -180,7 +185,9 @@ body {
 ```
 
 ## Topic list to About section
+
 HTML:
+
 ```html
 <ul>
   <li>Topic 1</li>
@@ -190,7 +197,9 @@ HTML:
   <li>Topic 5</li>
 </ul>
 ```
+
 Looks like this:
+
 <ul>
   <li>Topic 1</li>
   <li>Topic 2</li>
@@ -199,43 +208,56 @@ Looks like this:
   <li>Topic 5</li>
 </ul>
 
-
 ## Changing the order of page elements
 
 ```css
-
 /*Order rule to all element and add number to it in order you want it. */
-.vs-mainwrapper{
-  display:flex; 
-  flex-direction:column;
+.vs-mainwrapper {
+  display: flex;
+  flex-direction: column;
 }
-#vs-header{
-  order:0;
+#vs-header {
+  order: 0;
 }
-#vs-about-below-video {}
-#vs-about-section { order:2;}
-#vs-registration {}
-#vs-presentation {order:1;}
-#vs-thumbnails {}
-#vs-attachments {}
-#vs-hidden {}
-#vs-messageboard {}
-#vs-links {}
-#vs-chapters {}
-#vs-chapter-select {}
-#vs-questionnaire {}
-#vs-footer {}
-#vs-videosync-footer {}
-
-
+#vs-about-below-video {
+}
+#vs-about-section {
+  order: 2;
+}
+#vs-registration {
+}
+#vs-presentation {
+  order: 1;
+}
+#vs-thumbnails {
+}
+#vs-attachments {
+}
+#vs-hidden {
+}
+#vs-messageboard {
+}
+#vs-links {
+}
+#vs-chapters {
+}
+#vs-chapter-select {
+}
+#vs-questionnaire {
+}
+#vs-footer {
+}
+#vs-videosync-footer {
+}
 ```
 
 ## Full width hidden text background image
+
 <ul><li>Good size background image is 1980x1080</li></ul>
 
 ```css
 /*Hidden as an example */
 #vs-hidden {
-      background-size: cover;
+  background-size: cover;
 }
 ```
