@@ -83,9 +83,8 @@ The `display: none;` rule can be applied to all elements on the page. You just h
 #vs-thumbnails {
   /* Slide thumbnails carousel below video & slide */
 }
-Includes FAQ and the most common HTML/CSS/JS snippets to use in Videosync layouts
 
-
+#vs-attachments {
   /* Attachments list */
 }
 
