@@ -130,7 +130,6 @@ function addCountDown(e) {
         // setting distance time to days, hours, minutes, seconds
         var days = Math.floor(distance / (1000 * 3600 * 24));
 
-        console.log(days);
 
         var hours = Math.floor((distance % (1000 * 3600 * 24)) / (1000 * 3600));
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
