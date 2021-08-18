@@ -185,7 +185,7 @@ body {
 ## Changing the order of page elements
 
 ## Full width hidden text background image
-###Good size background image is 1980x1080
+<ul><li>Good size background image is 1980x1080</li></ul>
 ```css
 /*Hidden as an example */
 #vs-hidden {
