@@ -108,9 +108,10 @@ function addCountDown(e) {
   if (!hiddenContainer && !videoEl && !regElContainer) {
     window.requestAnimationFrame(addCountDown);
   } else if (!videoEl) {
-    var countDownDay = new Date(_eventData.publishingDate).getTime();
+    var date = new Date(_eventData.publishingDate);
+    var countDownDay = date.getTime();
     var dateSpan = document.querySelector("#date-span");
-    dateSpan.innerHTML = countDownDay.getDate() + "." + countDownDay.getMonth() + 1 + "." + countDownDay.getFullYear();
+    dateSpan.innerHTML = date.getDate() + "." + date.getMonth() + 1 + "." + date.getFullYear();
     // today
     var now = new Date().getTime();
     if (countDownDay === now || countDownDay < now) {
