@@ -186,6 +186,7 @@ body {
 
 ## Full width hidden text background image
 <ul><li>Good size background image is 1980x1080</li></ul>
+
 ```css
 /*Hidden as an example */
 #vs-hidden {
