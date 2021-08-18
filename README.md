@@ -1,14 +1,136 @@
 # General information
 
-Includes the most common HTML/CSS/JS snippets to use in Videosync layouts
+Includes FAQ and the most common HTML/CSS/JS snippets to use in Videosync layouts
 
-This applies to all the following snippets:
+# FAQ
 
-1. HTML should be added to their respective text fields (e.g. _Page Layout > About section > Content_ OR _Page Layout > Hidden stage setting > Text for pre-live presentation_)
-2. CSS should be added to _Advanced layout_ (usually to the upper field _Register and event page CSS_)
-3. JavaScript should be added to _Slides & Settings > Embed own javascript_. Always include <script> `CODE` </script> tags around the JS code.
+First, responses to some frequently asked questions about Videosync layouts:
+
+### What is CSS class or id?
+
+A class is used in HTML like this: `<div class="container">content</div>`.
+
+In CSS, this class can be referred like this to change its font color, for xample: `.container { color: red; }`
+
+ID is basically the same, but with different syntax: `<div id="container-id">content</div>`.
+
+In CSS: `#container { color: red; }`
+
+So in CSS, class uses dot (.) and id uses hashtag (#).
+
+### What is a good resolution for background images?
+
+1920x1080 is usually fine. If the image size is several Mb's, you should resize it using Videosync image cropper or external tools.
+
+### How do I hide/show chat messages (or any other element)?
+
+#### Chat:
+
+There is now a toggle within messageboard settings **"Hide published messages on viewing page"**.
+
+If it is an old event:
+
+1. To show, go to **Page Layout > Advanced layout** and (Ctrl+f) search for `#chatboard-comments { display: none; }`, remove this line.
+
+2. To hide, go **Page Layout > Advanced layout** and add the following code `#chatboard-comments { display: none; }`.
+
+#### Any element
+
+The `display: none;` rule can be applied to all elements on the page. You just have to find out the name of the required element using the browser's inspector or guess from the list below.
+
+```css
+/* Names of the most common main elements in event page */
+
+#vs-header {
+  /* Top bar with the event title */
+}
+
+#vs-about-below-video {
+  /* About section directly below video player */
+}
+
+#vs-about-section {
+  /* Normal about section */
+}
+
+#vs-registration {
+  /* Registration form area */
+}
+
+#vs-presentation {
+  /* General video player & slide (& chat next to video) area*/
+}
+
+#vs-reactions {
+  /* Emoji reactions below video player */
+}
+
+#vs-thumbnails {
+  /* Slide thumbnails carousel below video & slide */
+}
+
+#vs-attachments {
+  /* Attachments list */
+}
+
+#vs-hidden {
+  /* Hidden state placeholder for the player/slide area. Usually contains text "Live is paused" etc. Applies to pre-live, paused and hidden-od states. */
+}
+
+#vs-messageboard {
+  /* Chat / Messageboard either next to video player or below it as an own section */
+}
+
+#vs-links {
+  /* Link grid */
+}
+
+#vs-chapters {
+  /* Chapters list */
+}
+
+#vs-chapter-select {
+  /* Chapter select dropdown in on-demands */
+}
+
+#vs-footer {
+  /* Mainfooter */
+}
+
+#vs-videosync-footer {
+  /* Videosync's own small footer on the bottom  with terms, privacy policy, copyright notice */
+}
+
+#vs-users-list {
+  /* Participants list as a section on the page */
+}
+
+/* Notify the dev team if something should be added to this list */
+```
+
+### I can't find an element, for example "Speakers list" anywhere on the admin page. Where is it and how can I edit it?
+
+It is most likely custom made HTML structure in the about section. Check it out and look for HTML tags containing the information you're looking for:
+
+`<tags class="custom">INFO: Speaker Name</tags>`
+
+Now, it's easy to change the necessary information to what you want, e.g. _Speaker Name -> Another Alias_ without touching the HTML code.
+
+The styles related to this element can also be found by searching the _.custom_ class name within the **Advanced layout**:
+
+```css
+.custom {
+  color: red;
+}
+```
 
 # Snippets
+
+Guide to adding the following snippets to Videosync:
+
+1. HTML should be added to their respective text fields (e.g. **Page Layout > About section > Content** OR **Page Layout > Hidden stage setting > Text for pre-live presentation**)
+2. CSS should be added to **Page layout > Advanced layout** (usually to the upper field **Register and event page CSS**)
+3. JavaScript should be added to **Slides & Settings > Embed own javascript**. Always include <script> `CODE` </script> tags around the JS code.
 
 ## Countdown to hidden state
 
@@ -211,52 +333,30 @@ Looks like this:
 ## Changing the order of page elements
 
 ```css
-/*Order rule to all element and add number to it in order you want it. */
+/* Add this to make the "order" rules work */
 .vs-mainwrapper {
   display: flex;
   flex-direction: column;
 }
+
+/* Add the rule "order: " to all necessary elements followed by the respective number in which order you want them to be */
 #vs-header {
   order: 0;
-}
-#vs-about-below-video {
 }
 #vs-about-section {
   order: 2;
 }
-#vs-registration {
-}
 #vs-presentation {
   order: 1;
 }
-#vs-thumbnails {
-}
-#vs-attachments {
-}
-#vs-hidden {
-}
-#vs-messageboard {
-}
-#vs-links {
-}
-#vs-chapters {
-}
-#vs-chapter-select {
-}
-#vs-questionnaire {
-}
-#vs-footer {
-}
-#vs-videosync-footer {
-}
 ```
 
-## Full width hidden text background image
+## Full width background image for the hidden text
 
-<ul><li>Good size background image is 1980x1080</li></ul>
+<ul><li>Good size for a background image is 1980x1080</li></ul>
 
 ```css
-/*Hidden as an example */
+/* Hidden as an example */
 #vs-hidden {
   background-size: cover;
 }
