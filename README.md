@@ -37,7 +37,6 @@ This applies to all the following snippets:
 /* COUNTDOWN */
 
 .welcome-text-hidden {
-  font-family: "Inter", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
