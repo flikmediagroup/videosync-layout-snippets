@@ -395,7 +395,9 @@ _Good size for a background image is 1980x1080_
 
 ## Produced by FLIK -footer
 
-Promotional footer to be used in events produced by FLIK!
+Promotional footer to be used in events produced by FLIK! This is how it should look like:
+
+![image](https://user-images.githubusercontent.com/57210005/146944721-614749fb-f34a-4b34-9fa1-a23684723160.png)
 
 Copy this code to the custom JavaScript section:
 
@@ -403,3 +405,4 @@ Copy this code to the custom JavaScript section:
 <script src="https://cdn.videosync.fi/events/_common/flik-footer.js"></script>
 <link rel="stylesheet" href="https://cdn.videosync.fi/events/_common/flik-footer.css">
 ```
+
