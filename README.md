@@ -392,3 +392,14 @@ _Good size for a background image is 1980x1080_
   background-size: cover;
 }
 ```
+
+## Produced by FLIK -footer
+
+Promotional footer to be used in events produced by FLIK!
+
+Copy this code to the custom JavaScript section:
+
+```html
+<script src="https://cdn.videosync.fi/events/_common/flik-footer.js"></script>
+<link rel="stylesheet" href="https://cdn.videosync.fi/events/_common/flik-footer.css">
+```
