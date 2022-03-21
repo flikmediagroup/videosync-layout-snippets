@@ -172,7 +172,7 @@ HTML:
       <span id="minutes"></span><span class="count-span">Minuuttia</span>
     </div>
     <div>
-      <span id="seconds"></span><span class="count-span">Sekunttia</span>
+      <span id="seconds"></span><span class="count-span">Sekuntia</span>
     </div>
   </div>
 </div>
